@@ -1,0 +1,65 @@
+/* Estilos generales para el menú de hamburguesa */
+.hamburger-menu {
+    position: relative; /* Posición relativa para permitir la posición absoluta del contenido */
+    display: flex;
+    justify-content: flex-end; /* Alinea el botón a la derecha */
+}
+
+/* Estilos para el botón de hamburguesa */
+.hamburger-button {
+    font-size: 24px; /* Tamaño de la fuente del icono */
+    background: none; /* Fondo transparente */
+    border: none; /* Sin bordes */
+    cursor: pointer; /* Cursor de mano para indicar interactividad */
+    color: #000; /* Color del icono del botón - Cambia este valor para personalizar */
+    z-index: 1001; /* Asegura que el botón esté por encima del contenido del menú */
+}
+
+/* Estilos para el contenido del menú de hamburguesa */
+.hamburger-content {
+    display: none; /* Oculta el contenido por defecto */
+    position: absolute; /* Posición absoluta respecto al contenedor */
+    top: 100%; /* Posiciona debajo del botón */
+    right: 0; /* Alinea a la derecha */
+    width: 200px; /* Ancho del menú - Cambia este valor para personalizar */
+    background-color: #fff; /* Color de fondo del menú - Cambia este valor para personalizar */
+    color: #333; /* Color del texto del menú - Cambia este valor para personalizar */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra del menú para darle profundidad */
+    z-index: 1000; /* Asegura que el contenido esté sobre otros elementos */
+}
+
+/* Estilos para la lista de elementos del menú */
+.hamburger-content ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin relleno */
+}
+
+/* Estilos para los elementos de la lista */
+.hamburger-content li {
+    padding: 10px 20px; /* Espaciado dentro de cada elemento */
+}
+
+/* Estilos para los enlaces dentro de los elementos */
+.hamburger-content li a {
+    text-decoration: none; /* Elimina la subrayado de los enlaces */
+    color: #333; /* Color de los enlaces - Cambia este valor para personalizar */
+    display: block; /* Hace que el enlace ocupe todo el espacio del elemento */
+}
+
+/* Estilos para el estado hover de los elementos del menú */
+.hamburger-content li:hover {
+    background-color: #f4f4f4; /* Color de fondo al pasar el mouse - Cambia este valor para personalizar */
+}
+
+/* Mostrar el menú de hamburguesa cuando el botón está activo */
+.hamburger-menu.active .hamburger-content {
+    display: block; /* Muestra el contenido del menú */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        justify-content: center; /* Alinea el menú al centro en pantallas pequeñas */
+    }
+}
