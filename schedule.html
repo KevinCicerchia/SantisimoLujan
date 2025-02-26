@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Horarios</title>
+    <link rel="stylesheet" href="/Styles/calendar.css">
+    <link rel="stylesheet" href="/Styles/schedule.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <button id="refresh-button" class="refresh-button">Refrescar Horarios</button>
+      
+        <div class="schedule-container" id="schedule-container"></div>
+        <div id="saved-info-container">
+         
+        </div>
+    </div>
+
+    <!-- Ventana emergente oculta -->
+    <div class="info-panel" id="info-panel" style="display:none;">
+        <h2 id="date-header"></h2>
+        <div class="info-inputs">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name">
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni">
+        </div>
+        <button class="save-button" id="save-button">Guardar</button>
+        <button class="close-button" id="close-button">Cerrar</button>
+    </div>
+
+    <script src="/Functions/schedule.js"></script>
+</body>
+</html>
