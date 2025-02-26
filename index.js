@@ -51,3 +51,31 @@ document.addEventListener('DOMContentLoaded', () => {
         calendarContainer.appendChild(monthDiv);
     });
 });
+
+/*// Función para inicializar el carrusel
+let currentIndex = 0;
+const images = ["assets/lujan.png", "assets/santisimo.png", "assets/santisimo2.png"];
+const carouselImage = document.getElementById("carousel-image");
+
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    carouselImage.style.opacity = 0; // Inicia la transición de desvanecimiento
+    setTimeout(() => {
+        carouselImage.src = images[currentIndex];
+        carouselImage.style.opacity = 1; // Termina la transición de desvanecimiento
+    }, 800); // Tiempo de la transición de desvanecimiento
+}, 3000); // Cambia de imagen cada 3 segundos
+
+// Verificación de carga de imágenes
+document.addEventListener("DOMContentLoaded", function() {
+    images.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+        img.addEventListener('load', () => {
+            console.log(`${img.src} cargada correctamente`);
+        });
+        img.addEventListener('error', () => {
+            console.error(`Error al cargar la imagen ${img.src}`);
+        });
+    });
+});*/
