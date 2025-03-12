@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px; /* Espaciado alrededor del contenido */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alineación al inicio para evitar que se desplace hacia el centro */
+    height: 100vh; /* Altura completa de la ventana */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Siempre 2 columnas */
+    gap: 20px;
+    max-width: 800px; /* Ancho máximo para el contenedor */
+    width: 100%; /* Ancho completo */
+    margin-top: 20px; /* Espaciado superior para evitar que los divs se desplacen hacia arriba */
+}
+
+.item {
+    background-color: #025353; /* Color azul musgo */
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
+    transition: background-color 0.3s;
+    border: 2px solid #ffffff; /* Borde azul más oscuro */
+    height: 100px; /* Altura fija para los divs */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:hover {
+    background-color: #0056b3; /* Color azul más oscuro al pasar el mouse */
+}
+
+/* Media queries para mantener 2 columnas en pantallas más pequeñas */
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Mantener 2 columnas */
+    }
+
+    .item {
+        height: 80px; /* Altura ajustada para pantallas pequeñas */
+    }
+}
